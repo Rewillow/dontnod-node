@@ -1,0 +1,166 @@
+.carousel {
+    overflow: hidden;
+    display: flex;
+    width: 950px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.carousel h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-arrow {
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.indicator-buttons {
+    border: none;
+    cursor: pointer;
+}
+
+.indicators > button {
+    margin: 5px;
+    background: none;
+    color: white;
+    font-size: 30px;
+}
+
+.indicator-symbol-active {
+    color: #009B96;
+}
+
+@media (min-width: 360px) and (max-width: 599px) {
+    .carousel {
+        width: 98%; 
+        margin-top: -20px;
+    }
+
+    .carousel h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .carousel h3 {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .carousel-buttons {
+        justify-content: space-around;
+        width: 45%;
+        margin: auto;
+    }
+
+    .button-arrow {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .indicators > button {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+
+    .carousel {
+        width: 98%;
+        margin-top: -20px;
+    }
+
+    .carousel h1 {
+        font-size: 37px;
+        text-align: center;
+    }
+
+    .carousel h3 {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .carousel-buttons {
+        justify-content: space-around;
+        width: 45%;
+        margin: auto;
+    }
+
+    .button-arrow {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .indicators > button {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+
+    .carousel {
+        width: 95%;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+
+    .carousel h1 {
+        text-align: center;
+    }
+
+    .carousel h3 {
+        text-align: center;
+    }
+
+    .carousel-buttons {
+        justify-content: space-around;
+        width: 45%;
+        margin: auto;
+    }
+
+    .button-arrow {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .indicators > button {
+        display: none;
+    }
+}
+
+@media (min-width: 1540px) { 
+
+    .carousel h1 {
+        font-size: 55px;
+    }
+
+    .carousel {
+        width: 1100px;
+    }
+
+}

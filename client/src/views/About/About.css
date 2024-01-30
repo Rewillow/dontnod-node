@@ -1,0 +1,133 @@
+.date {
+    color: white;
+}
+
+#description {
+    margin: 10px 0 10px 0; 
+}
+
+.vertical-timeline-element-content {
+    padding: 2em 3em !important;
+}
+
+.about--text {
+    width: 37%;
+    margin-left: 175px;
+    margin-top: 40px;
+}
+
+.about h1 {
+    font-size: 60px;
+    color: white;
+}
+
+.about--paragraph {
+    color: white;
+}
+
+.about--button {
+    text-decoration: none;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 5px;
+    color: #009B96;
+    background-color: transparent;
+    border: 1px solid #009B96;
+}
+
+.about--button:hover {
+    transition: 0.4s ease-in-out;
+    color: white;
+    background-color: #009B96;
+    
+}
+
+
+@media (min-width: 360px) and (max-width: 599px) {
+
+    .vertical-timeline-element-date {
+        display: block !important;
+        float: none !important;
+        color: black;
+    }
+
+    .about--text {
+        width: 85%;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    }
+
+@media (min-width: 600px) and (max-width: 799px) {
+
+    .vertical-timeline-element-date {
+        display: block !important;
+        float: none !important;
+        color: black;
+    }
+
+    .about--text {
+        width: 85%;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+ }
+
+ @media (min-width: 800px) and (max-width: 999px) {
+
+    .vertical-timeline-element-date {
+        display: block !important;
+        float: none !important;
+        color: black;
+    }
+
+    .about--text {
+        width: 85%;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+ }
+
+ @media (min-width: 1000px) and (max-width: 1169px) {
+
+    .vertical-timeline-element-date {
+        display: block !important;
+        float: none !important;
+        color: black;
+    }
+
+    .about--text {
+        width: 85%;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+ }
+
+ @media (min-width: 1170px) and (max-width: 1299px) {
+    .about--text {
+        width: 85%;
+        margin-left: 65px;
+        margin-bottom: 10px;
+    }
+ }
+
+ @media (min-width: 1540px) {
+    .about--text {
+        width: 85%;
+        margin-left: 185px;
+        margin-bottom: 20px;
+    }
+
+    .about h1 {
+        font-size: 70px;
+        color: white;
+    }
+
+    .about--paragraph {
+        font-size: 20px;
+    }
+ }

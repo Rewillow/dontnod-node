@@ -1,0 +1,58 @@
+.memo--card--single {
+    position: relative;
+    width: 95px;
+}
+
+.memo--card--single img {
+    display: block;
+    width: 100%;
+}
+
+.memo--card--front {
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.memo--card--retro {
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.memo--card--single .memo--card--front {
+    transform: rotateY(90deg);
+    position: absolute;
+    transition: all ease-in 0.2s;
+}
+
+.flipped .memo--card--front {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+.memo--card--single .memo--card--retro {
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+}
+
+.flipped .memo--card--retro {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
+
+@media (min-width: 360px) and (max-width: 599px) {
+    .memo--card--single {
+        width: 60px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    .memo--card--single {
+        width: 90px;
+    }
+}
+
+@media (min-width: 1540px) {
+    .memo--card--single {
+        width: 120px;
+    }
+}

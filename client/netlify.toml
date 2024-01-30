@@ -1,0 +1,9 @@
+[[redirect]]
+from "/*"
+to "/index.html"
+status = 200
+
+[[redirects]]
+from = "/snippet/*"
+to = "/index.html"
+status = 200

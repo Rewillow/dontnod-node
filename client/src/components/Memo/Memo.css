@@ -1,0 +1,93 @@
+.memo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+}
+
+.memo h1 {
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.memo p {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.memo--button--start {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(210, 22, 22);
+    color: white;
+    padding: 6px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.memo--button--start:hover {
+    background-color: green;
+    transition: 0.5s ease-in-out;
+}
+
+.memo--cards--container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 360px) and (max-width: 599px) {
+    .memo {
+        height: 85vh;
+    }
+
+    .memo h1 {
+        font-size: 40px;
+    }
+
+    .memo--cards--container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    .memo {
+        height: 95vh;
+    }
+
+    .memo h1 {
+        font-size: 40px;
+    }
+
+    .memo--cards--container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    .memo {
+        height: 95vh;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1299px) {
+    .memo {
+        height: 95vh;
+    }
+}
+
+@media (min-width: 1540px) {
+    .memo {
+        height: 95vh;
+    }
+
+    .memo h1 {
+        font-size: 60px;
+    }
+}

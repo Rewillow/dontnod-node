@@ -1,0 +1,131 @@
+.start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    isolation: isolate;
+}
+
+.start::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #009b96;
+    opacity: 0.2;
+    background-image: url("https://images8.alphacoders.com/642/thumb-1920-642030.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.start h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.start--elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 75%;
+}
+
+.start--logo {
+    width: 500px;
+}
+
+.play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    background: linear-gradient( #009b96, #407ed7 );
+    border-radius: 50%;
+    color: white;
+    border: none;
+}
+
+.play--icon {
+    color: white;
+    font-size: 150px;
+    cursor: pointer;
+}
+
+.play-:before, 
+.play:after {
+    content: "";
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    background-color: #009b96;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 1;
+}
+
+.play:before {
+    animation: play 2s ease-out infinite;
+}
+
+.play:after {
+    animation: play 2s 1s ease-out infinite;
+}
+
+@keyframes play{
+
+   100% {
+    transform: scale(2);
+    opacity: 0;
+   }
+}
+
+@media (min-width: 360px) and (max-width: 599px) {
+
+    .start--logo {
+        width: 330px;
+    }
+
+    .play {
+        height: 150px;
+        width: 150px;
+    }
+    
+    .play--icon {
+        font-size: 120px;
+    }
+    
+    .play-:before, 
+    .play:after {
+        height: 150px;
+        width: 150px;
+
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+
+    .start--logo {
+        width: 370px;
+    }
+
+    .play {
+        height: 160px;
+        width: 160px;
+    }
+    
+    .play--icon {
+        font-size: 120px;
+    }
+    
+    .play-:before, 
+    .play:after {
+        height: 160px;
+        width: 160px;
+
+    }
+}

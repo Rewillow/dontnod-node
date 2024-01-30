@@ -1,0 +1,115 @@
+.platform {
+    display: flex;
+    flex-direction: column;
+    width: 950px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.platform h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.platform--icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(247, 247, 247);
+}
+
+.single--icon {
+    margin: 30px;
+    font-size: 120px;
+}
+
+.single--icon:hover {
+    transition: 0.2s ease-in-out;
+    font-size: 170px;
+}
+
+@media (min-width: 360px) and (max-width: 599px) {
+
+    .platform {
+        width: 98%;
+        margin-top: -10px;
+    }
+
+    .platform h1 {
+        font-size: 35px;
+    }
+
+    .platform--icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+    }
+
+    .single--icon {
+        font-size: 60px;
+    }
+
+    .single--icon:hover {
+        font-size: 80px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    .platform {
+        width: 98%;
+        margin-top: -10px;
+    }
+
+    .platform h1 {
+        font-size: 37px;
+    }
+
+    .platform--icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+    }
+
+    .single--icon {
+        font-size: 80px;
+    }
+
+    .single--icon:hover {
+        font-size: 80px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    .platform {
+        width: 98%;
+        margin-top: -10px;
+    }
+
+    .platform--icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+    }
+
+    .single--icon {
+        font-size: 95px;
+    }
+
+    .single--icon:hover {
+        font-size: 80px;
+    }
+}
+
+@media (min-width: 1540px) {
+    .platform {
+        margin-bottom: 100px;
+    }
+
+    .platform h1 {
+        font-size: 55px;
+    }
+
+    .single--icon {
+        font-size: 150px;
+    }
+}

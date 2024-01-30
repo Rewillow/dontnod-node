@@ -1,0 +1,240 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+.login--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+}
+
+.login--elements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(../../assets/LoginBackground.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.login--container--input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+.login--field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    padding: 5px 10px;
+}
+
+.login--field h3 {
+    color: white;
+}
+
+.login--field input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(213, 213, 213);
+    width: 100%;
+    color: rgb(213, 213, 213);
+}
+
+.login--field input::placeholder {
+    color: rgb(213, 213, 213);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.login--field input:focus {
+    outline: none;
+}
+
+.login--field--username {
+    margin-bottom: 20px;
+}
+
+.login--field--email {
+    margin-bottom: 20px;
+}
+
+.login--field--button {
+    margin-top: 25px;
+    align-self: center;
+    padding: 7px 10px;
+    width: 50%;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+}
+
+.login--field--button:hover {
+    transition: 0.4s ease-in-out;
+    background-color: white;
+    color: #009B96;
+}
+
+.login--field p {
+  align-self: center;
+  color: white;
+  font-size: 12px;
+}
+
+.login--field p a {
+    color: rgb(193, 193, 193);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.login--field p a:hover {
+    color: rgb(0, 153, 255);
+}
+
+.login--field--signup {
+    margin-top: 15px;
+}
+
+.login--field--forgot--password {
+    margin-top: 5px;
+}
+
+.login--loading--icon {
+    width: 35px;
+    align-self: center;
+    margin-top: 10px;
+}
+
+
+@media (min-width: 360px) and (max-width: 445px) {
+
+    .login--container {
+        height: 95%;
+        width: 98%;
+        margin: auto;
+    }
+    
+    .login--elements {
+        flex-direction: column;
+        background-image: url(../../assets/LoginBackground3.png);
+        height: 95%;
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .login--container--input {
+        display: flex;
+        margin: auto;
+        height: 50%;
+        width: 90%;
+        margin-top: 360px;
+    }
+}
+
+@media (min-width: 446px) and (max-width: 599px) {
+
+    .login--container {
+        height: 100%;
+        width: 98%;
+        margin: auto;
+    }
+    
+    .login--elements {
+        background-image: url(../../assets/LoginBackground4.png);
+        height: 85%;
+        width: 90%;
+    }
+
+    .login--container--input {
+        margin: auto;
+        height: 50%;
+        width: 90%;
+        margin-top: 360px;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+
+    .login--container {
+        height: 100%;
+        width: 98%;
+        margin: auto;
+    }
+    
+    .login--elements {
+        background-image: url(../../assets/LoginBackground5.png);
+        height: 85%;
+        width: 90%;
+    }
+
+    .login--container--input {
+        margin: auto;
+        height: 50%;
+        width: 90%;
+        margin-top: 360px;
+    }
+
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+
+    .login--container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .login--elements {
+        flex-direction: column;
+        align-items: flex-end;
+        background-image: url(../../assets/LoginBackground6.png);
+        height: 80%;
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1299px) {
+
+    .login--container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .login--elements {
+        flex-direction: column;
+        align-items: flex-end;
+        background-image: url(../../assets/LoginBackground7.png);
+        height: 80%;
+        width: 100%;
+    }
+
+}

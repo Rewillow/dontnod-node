@@ -1,0 +1,53 @@
+.account {
+    margin-left: 20px;
+}
+
+.account h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.account p {
+    color: white;
+}
+
+.account--input form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.account--input form label {
+    color: white;
+    margin-top: 10px;
+}
+
+.account input {
+    pointer-events: none;
+    max-width: 350px;
+    margin-top: 5px;
+}
+
+
+@media (min-width: 360px) and (max-width: 599px) {
+
+    .account h2 {
+        font-size: 25px;
+    }
+
+    .account p {
+        width: 80%;
+        font-size: 13px;
+    }
+
+    .account--input form label {
+        font-size: 14px;
+    }
+
+    .account input {
+        max-width: 210px;
+        margin-top: 5px;
+        font-size: 11px;
+    }
+}

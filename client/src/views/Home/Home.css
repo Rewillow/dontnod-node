@@ -1,0 +1,269 @@
+.home {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.home-welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.home-logo {
+    width: 70%;
+}
+
+.home--text--discover {
+    animation: home--text--discover 9s infinite;
+    background-color: #009B96;
+    margin-top: 40px;
+    color: white;
+    font-size: 40px;
+    width: 98.9%;
+    text-align: center;
+    padding: 5px;
+}
+
+.home--arrow--down {
+    animation: home--arrow--down 2s ease 0s infinite normal none;
+    color: white;
+    font-size: 100px;
+    margin-top: -7px;
+}
+
+.home--about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    color: white;
+}
+
+.home--about--text {
+    width: 36%;
+}
+
+.home--about--text h1 {
+    font-size: 50px;
+}
+
+.home--about--text a {
+    text-decoration: none;
+}
+
+.home--about--button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #009B96;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+}
+
+.home--about--button--arrow {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.home--about--button:hover .home--about--button--arrow {
+transition: 0.3s ease-in-out ;
+transform: translateX(9px);
+}
+
+.home--about--img {
+    width: 650px;
+}
+
+
+@keyframes home--text--discover {
+    0% {
+        background-color: rgb(207, 207, 207);
+        color: #009B96;
+    }
+
+    50% {
+        background-color: #009B96;
+        color: white;
+    }
+
+    100% {
+        background-color: rgb(207, 207, 207);
+        color: #009B96;
+    }
+  }
+
+@keyframes home--arrow--down {
+    0% {
+     
+    }
+
+    50% {
+        transform: translate(0px, 25px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+  }
+
+@media (min-width: 360px) and (max-width: 599px) {
+    .home-logo {
+        width: 90%;
+    }
+ 
+    .home--text--discover {
+        font-size: 35px;
+    }
+
+    .home--about {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .home--about--text {
+        width: 98%;
+    }
+
+    .home--about--text h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home--about--text p {
+        font-size: 15px;
+    }
+
+    .home--about--button {
+        margin-bottom: 20px;
+    }
+
+    .home--about--img {
+        width: 98%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+
+    .home-logo {
+        width: 93%;
+    }
+ 
+    .home--text--discover {
+        font-size: 37px;
+    }
+
+    .home--about {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .home--about--text {
+        width: 98%;
+    }
+
+    .home--about--text h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home--about--text p {
+        font-size: 15px;
+    }
+
+    .home--about--button {
+        margin-bottom: 20px;
+    }
+
+    .home--about--img {
+        width: 98%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+
+    .home-logo {
+        width: 95%;
+    }
+ 
+    .home--about {
+        flex-direction: column;
+        margin-top: 25px;
+        width: 85%;
+    }
+
+    .home--about--text {
+        width: 100%;
+    }
+
+    .home--about--text h1 {
+        text-align: center;
+    }
+
+    .home--about--text p {
+        font-size: 15px;
+    }
+
+    .home--about--button {
+        margin-bottom: 20px;
+    }
+
+    .home--about--img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1299px) {
+
+    .home--about--text {
+        width: 34%;
+    }
+ 
+    .home--about--img {
+        width: 530px;
+    }
+}
+
+@media (min-width: 1540px) {
+    
+    .home--about {
+        margin-bottom: 130px;
+    }
+
+    .home--text--discover {
+        font-size: 50px;
+    }
+
+    .home--about--text {
+        width: 37%;
+    }
+    
+    .home--about--text h1 {
+        font-size: 55px;
+    }
+
+    .home--about--text p {
+        font-size: 19px;
+    }
+
+    .home--about--button {
+        font-size: 16px
+    }
+
+    .home--about--img {
+        width: 750px;
+    }
+    
+}
+

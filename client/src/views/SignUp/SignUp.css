@@ -1,0 +1,180 @@
+.signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+.signup--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+}
+
+.signup--elements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(../../assets/SignUpWallpaper.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.signup--container--input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+.signup--field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    padding: 5px 10px;
+}
+
+.signup--field h3 {
+    color: white;
+}
+
+.signup--field input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(213, 213, 213);
+    width: 100%;
+    color: rgb(213, 213, 213);
+}
+
+.signup--field input::placeholder {
+    color: rgb(213, 213, 213);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.signup--field input:focus {
+    outline: none;
+}
+
+.signup--field--username {
+    margin-bottom: 20px;
+}
+
+.signup--field--email {
+    margin-bottom: 20px;
+}
+
+.signup--field--button {
+    margin-top: 25px;
+    align-self: center;
+    padding: 7px 10px;
+    width: 50%;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+}
+
+.signup--field--button:hover {
+    transition: 0.4s ease-in-out;
+    background-color: white;
+    color: #009B96;
+}
+
+.signup--field p {
+  align-self: center;
+  color: white;
+  font-size: 12px;
+}
+
+.signup--field p a {
+    color: rgb(193, 193, 193);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.signup--field p a:hover {
+    color: rgb(0, 153, 255);
+}
+
+.signup--field--signup {
+    margin-top: 15px;
+}
+
+@media (min-width: 360px) and (max-width: 799px) {
+    .signup--container {
+        height: 95%;
+        width: 98%;
+        margin: auto;
+    }
+    
+    .signup--elements {
+        background-image: url(../../assets/SignUpWallpaper2.png);
+        height: 95%;
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .signup--container--input {
+        margin: auto;
+        height: 50%;
+        width: 90%;
+        margin-top: 360px;
+    }
+
+    .signup--field--signup {
+        text-align: center;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    .signup--container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .signup--elements {
+        flex-direction: column;
+        align-items: flex-end;
+        background-image: url(../../assets/SignUpWallpaper999.png);
+        height: 80%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1299px) {
+    .signup--container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .signup--elements {
+        flex-direction: column;
+        align-items: flex-end;
+        background-image: url(../../assets/SignUpWallpaper1299.png);
+        height: 80%;
+        width: 100%;
+    }
+}
