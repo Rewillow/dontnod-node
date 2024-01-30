@@ -3,7 +3,7 @@ const express = require("express")
 const session = require("express-session")
 const cors = require("cors")
 const morgan = require("morgan")
-const PORT = 5000
+
 const app = express()
 const gameRouter = require("./routes/games")
 const userRouter = require("./routes/user")
@@ -29,10 +29,19 @@ app.use('/api', userRouter)
 app.use('/api', favoriteRouter)
 
 
-app.listen(PORT, () => {
-    console.log(`Server attivo nella porta ${PORT}`);
-})
+const port = process.env.DB_PORT || 5000;
+const start = async () => {
+  try {
+    await connectDB(process.env.DB_HOST);
+    app.listen(port, () =>
+      console.log(`Server is listening on port ${port}...`)
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
 
+start();
 
 
 
