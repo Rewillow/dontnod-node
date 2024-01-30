@@ -6,9 +6,6 @@
             "use": "@vercel/node"
         }
     ],
-    "dependencies": {
-        "mysql2": "^3.7.0"
-      },
     "routes": [
         {
             "src": "/(.*)",
