@@ -83,7 +83,7 @@ const Login = () => {
                 <div className='login--elements'>
                    <div className='login--container--input' >
                    <div className='login--field'>
-                   <input type='email' placeholder='Email' name='email' className='login--field--email' disabled={isDisabled}></input>
+                   <input type='email' placeholder='Email' name='email' className='login--field--email' autoComplete='email' disabled={isDisabled}></input>
                    <input type='password' placeholder='Password' name='password' autoComplete='current-password' disabled={isDisabled}></input>
                    {/* Specifico le caratteristiche di stile del messaggio di errore */}
                    {errorMessage && <p style={{ color: `red`, fontWeight: `regular`, marginTop: `7px`, fontSize: `14px` }}>{errorMessage}</p>}

@@ -55,8 +55,8 @@ const SignUp = () => {
                 <div className='signup--elements'>
                    <div className='signup--container--input' >
                    <div className='signup--field'>
-                   <input type='text' placeholder='Username' name='name' className='signup--field--email' disabled={isDisabled}></input>
-                   <input type='text' placeholder='Email' name='email' className='signup--field--email' disabled={isDisabled}></input>
+                   <input type='text' placeholder='Username' name='name' className='signup--field--email' autoComplete='username' disabled={isDisabled}></input>
+                   <input type='text' placeholder='Email' name='email' className='signup--field--email' autoComplete='email' disabled={isDisabled}></input>
                    <input type='password' placeholder='Password' name='password' autoComplete='current-password' disabled={isDisabled}></input>
                    {errorMessage && <p style={{ color: `red`, fontWeight: `light`, marginTop: `7px`, fontSize: `14px` }}>{errorMessage}</p>}
                    <button className='signup--field--button' onClick={registerUser}>SIGN UP</button>
