@@ -6,8 +6,9 @@ const {Op} = require("sequelize")
 const jwt = require("jsonwebtoken")
 const User = require("../models/User")
 
+const userController = {
 // Per ricevere la lista di tutti gli utenti
-router.get('/user', async (req, res) => {
+usersList: async (req, res) => {
     const userId = req.params.id
     try {
         const getUsers = await User.findAll(userId)
@@ -15,9 +16,8 @@ router.get('/user', async (req, res) => {
     } catch(err) {
         res.status(500).json({error: "Impossibile ricevere la lista",})
     }
-})
-
-router.get('/user/:userId', async(req,res) => {
+},
+singleUser: async(req,res) => {
     const userId = req.params.userId
     try {
         const getUser = await User.findByPk(userId)
@@ -29,7 +29,7 @@ router.get('/user/:userId', async(req,res) => {
     } catch(err) {
         console.error(err);
     }
-})
+},
 
 // Per permettere la registrazione utente
 // router.post('/signup', async(req,res) => {
@@ -48,7 +48,7 @@ router.get('/user/:userId', async(req,res) => {
 //     }
 // })
 
-router.post('/signup', async(req,res) => {
+signup: async(req,res) => {
     const {username, email, password} = req.body
     try {
         const existingUser = await User.findOne({where: {[Op.or]: [{ username },{ email }]}});
@@ -68,9 +68,8 @@ router.post('/signup', async(req,res) => {
         console.error("Errore durante la creazione dell'utente");
         res.status(500).json({error: "Errore interno del server", err})
     }
-})
-
-router.post('/login', async(req,res) => {
+},
+login: async(req,res) => {
     const {email, password} = req.body
     try {
         const existingUser = await User.findOne({where: {[Op.or]: [{ email },{ password }]}})
@@ -95,7 +94,7 @@ router.post('/login', async(req,res) => {
         console.error("Errore durante l'accesso");
         return res.status(500).json({error: "Errore interno del server"})
     }
-})
+},
 
 // Per permettere l'accesso all'utente
 // router.post('/login', async(req,res) => {
@@ -120,15 +119,14 @@ router.post('/login', async(req,res) => {
 // })
 
 // Per permettere all'utente di scollegarsi
-router.post('/logout', async(req,res) => {
+logout: async(req,res) => {
     req.session.auth = false
     try {
         res.status(200).json({message: "Logout effettuato con successo"})
     } catch(err) {
         res.status(500).json({error: "Errore nella disconnessione"})
     }
-})
-
+},
 
 // router.post('/login', async(req,res) => {
 //     const {email, password} = req.body
@@ -177,13 +175,14 @@ router.post('/logout', async(req,res) => {
 //     }
 // });
 
-router.get('/auth', (req,res) => {
+auth: (req,res) => {
     const isAuthenticated = req.session.auth
     if(isAuthenticated) {
         res.status(200).json({authenticated: true, message:"Utente autenticato"})
     } else {
         res.status(401).json({ authenticated: false, message: 'Utente non autenticato' });
     }
-})
+}
+}
 
-module.exports = router
+module.exports = userController

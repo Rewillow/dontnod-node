@@ -3,12 +3,8 @@ const express = require("express")
 const session = require("express-session")
 const cors = require("cors")
 const morgan = require("morgan")
-
 const app = express()
-const gameRouter = require("./routes/games")
-const userRouter = require("./routes/user")
-const favoriteRouter = require("./routes/favorites")
-const connectDB = require("./database/connectDB")
+
 
 
 app.use(cors())
@@ -17,31 +13,28 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 app.use(morgan('tiny'))
 
-app.get('/', (req,res) => {
-    res.send("Benvenuto!")
-})
+const favoriteRouter = require("./routes/favorite.router")
+const gamesRouter = require("./routes/games.router")
+const userRouter = require("./routes/user.router")
 
-app.use('/api', gameRouter)
+
+
+app.use('/api', gamesRouter)
 app.use('/api', userRouter)
 app.use('/api', favoriteRouter)
 
+const PORT = process.env.DB_PORT || 5000
 
-const port = process.env.DB_PORT || 5000;
-const start = async () => {
-  try {
-    await connectDB(process.env.DB_HOST);
-    app.listen(port, () =>
-      console.log(`Server is listening on port ${port}...`)
-    );
-  } catch (error) {
-    console.log(error);
-  }
-};
+app.listen(() => {
+  console.log('Il server è attivo');
+})
 
-start();
+
+
 
 
 
