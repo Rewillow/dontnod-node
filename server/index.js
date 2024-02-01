@@ -27,7 +27,7 @@ app.use('/api', gamesRouter)
 app.use('/api', userRouter)
 app.use('/api', favoriteRouter)
 
-const PORT = process.env.DB_PORT
+const PORT = process.env.PORT
 
 app.listen(PORT, () => {
   console.log('Il server è attivo');
