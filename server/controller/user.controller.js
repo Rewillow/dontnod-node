@@ -155,34 +155,34 @@ logout: async(req,res) => {
 // })
 
 // Rotta di autenticazione
-// router.get('/authh', async (req, res) => {
-//     const token = req.headers.authorization;
-//     if (!token) {
-//         return res.status(401).json({ authenticated: false, error: "Errore nell'autenticazione" });
-//     }
-//     try {
-//         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-//         const existingUser = await User.findByPk(decoded.userId);
-//         console.log(existingUser);
-//         if (existingUser) {
-//             return res.status(200).json({ authenticated: true, message: "Autenticato" });
-//         } else {
-//             return res.status(401).json({ authenticated: false, error: "Errore nell'autenticazione" });
-//         }
-//     } catch (err) {
-//         console.error("Errore durante l'autenticazione", err);
-//         return res.status(401).json({ authenticated: false, error: "Errore nell'autenticazione" });
-//     }
-// });
-
-auth: (req,res) => {
-    const isAuthenticated = req.session.auth
-    if(isAuthenticated) {
-        res.status(200).json({authenticated: true, message:"Utente autenticato"})
-    } else {
-        res.status(401).json({ authenticated: false, message: 'Utente non autenticato' });
+auth: async (req, res) => {
+    const token = req.headers.authorization;
+    if (!token) {
+        return res.status(401).json({ authenticated: false, error: "Errore nell'autenticazione" });
+    }
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const existingUser = await User.findByPk(decoded.userId);
+        console.log(existingUser);
+        if (existingUser) {
+            return res.status(200).json({ authenticated: true, message: "Autenticato" });
+        } else {
+            return res.status(401).json({ authenticated: false, error: "Errore nell'autenticazione" });
+        }
+    } catch (err) {
+        console.error("Errore durante l'autenticazione", err);
+        return res.status(401).json({ authenticated: false, error: "Errore nell'autenticazione" });
     }
 }
+
+// auth: (req,res) => {
+//     const isAuthenticated = req.session.auth
+//     if(isAuthenticated) {
+//         res.status(200).json({authenticated: true, message:"Utente autenticato"})
+//     } else {
+//         res.status(401).json({ authenticated: false, message: 'Utente non autenticato' });
+//     }
+// }
 }
 
 module.exports = userController
