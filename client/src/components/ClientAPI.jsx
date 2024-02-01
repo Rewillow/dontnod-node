@@ -5,7 +5,7 @@ const ClientAPI = {
 
   login: async (email, password) => {
     return axios
-      .post('/api/login', {
+      .post('https://dontnod-server.vercel.app/api/login', {
         email: email,
         password: password
       })
@@ -15,7 +15,7 @@ const ClientAPI = {
   },
   
   signUp: async (username, email, password) => {
-    return axios.post('/api/signup', {
+    return axios.post('https://dontnod-server.vercel.app/api/signup', {
         username: username,
         email: email,
         password: password
@@ -27,7 +27,7 @@ const ClientAPI = {
 
   user: async (userId) => {
     try {
-      const response = await axios.get (`/api/user/${userId}`)
+      const response = await axios.get (`https://dontnod-server.vercel.app/api/user/${userId}`)
       // console.log(response.data);
       return response
     } catch(err) {
@@ -36,19 +36,19 @@ const ClientAPI = {
   },
 
   logout: async () => {
-    return await axios.post('/api/logout')
+    return await axios.post('https://dontnod-server.vercel.app/api/logout')
     .then(response => {
       return response.data
     })
   },
 
   videogames: () => {
-    return axios.get('/api/listGames');
+    return axios.get('https://dontnod-server.vercel.app/api/listGames');
   },
 
   addFavorites: async (gameId, userId) => {
     try {
-        const response = await axios.post(`/api/listGames/${gameId}/add`, {
+        const response = await axios.post(`https://dontnod-server.vercel.app/api/listGames/${gameId}/add`, {
             userId: userId
         });
         return response.data;
@@ -60,7 +60,7 @@ const ClientAPI = {
 
  removeFavorites: async(gameId, userId) => {
   try {
-    const response = await axios.post(`/api/listGames/${gameId}/remove`, {
+    const response = await axios.post(`https://dontnod-server.vercel.app/api/listGames/${gameId}/remove`, {
       userId: userId
     })
     return response.data
