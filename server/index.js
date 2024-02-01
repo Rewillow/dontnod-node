@@ -4,18 +4,19 @@ const session = require("express-session")
 const cors = require("cors")
 const morgan = require("morgan")
 const app = express()
+const connectDB = require("./database/index")
 
 
 
 app.use(cors())
-// app.use(session({
-//     secret: process.env.JWT_SECRET,
-//     resave: false,
-//     saveUninitialized: true
-// }));
+app.use(session({
+    secret: process.env.JWT_SECRET,
+    resave: false,
+    saveUninitialized: true
+}));
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
-// app.use(morgan('tiny'))
+app.use(morgan('tiny'))
 
 const favoriteRouter = require("./routes/favorite.router")
 const gamesRouter = require("./routes/games.router")
@@ -26,7 +27,7 @@ app.use('/api', gamesRouter)
 app.use('/api', userRouter)
 app.use('/api', favoriteRouter)
 
-const PORT = 5000
+const PORT = process.env.DB_PORT
 
 app.listen(PORT, () => {
   console.log('Il server è attivo');

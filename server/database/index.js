@@ -1,19 +1,12 @@
-const mysql = require('mysql2')
-
-
-const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0
+const { Pool } = require('pg')
+ 
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL + "?sslmode=require",
 })
 
-pool.getConnection((err, conn) => {
-    if(err) console.log(err);
-    console.log("Connessione riuscita");
+pool.connect((err) => {
+    if (err) throw err
+    console.log("Connect to PostgreSQL successfully!")
 })
 
-module.exports = pool.promise()
+module.exports = pool
