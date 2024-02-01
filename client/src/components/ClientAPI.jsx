@@ -76,7 +76,7 @@ const ClientAPI = {
 
   rememberFavorites: async(userId) => {
     try {
-      const response = await axios.get(`/api/listFavorites/${userId}`)
+      const response = await axios.get(`https://dontnod-server.vercel.app/api/listFavorites/${userId}`)
       return response.data
     } catch(error) {
       console.error();
@@ -84,7 +84,7 @@ const ClientAPI = {
   },
 
   minigames: () => {
-    return axios.get('/api/auth')
+    return axios.get('https://dontnod-server.vercel.app/api/auth')
   }
 };
 
