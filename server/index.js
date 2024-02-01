@@ -16,7 +16,7 @@ app.use(session({
 }));
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
-app.use(morgan('tiny'))
+// app.use(morgan('tiny'))
 
 const favoriteRouter = require("./routes/favorite.router")
 const gamesRouter = require("./routes/games.router")
@@ -27,10 +27,10 @@ app.use('/api', gamesRouter)
 app.use('/api', userRouter)
 app.use('/api', favoriteRouter)
 
-const PORT = process.env.PORT
+const PORT = process.env.DB_PORT || 5000
 
 app.listen(PORT, () => {
-  console.log('Il server è attivo');
+  console.log(`Il server è attivo alla porta ${PORT}`);
 })
 
 
